@@ -1,11 +1,13 @@
-**Kindle Dictionary**
+# English to Bangla Dictionary for Amazon Kindle
 
-Use:
+## How to Install
+- Download the latest [e2b-dictionary.mobi](https://github.com/mahbubur001/kindle-dictionary/raw/main/e2b-dictionary.mobi)
+- Connect your kindle to your pc via USB Cable.
+- Copy the e2b-dictionary.mobi to your kindle's *Documents > Dictionary* folder.
+- Now open your Kindle Setting on your device and from dictionary choose the new dictionary you just installed!
 
-Download : e2b-dictionary.mobi 
-connect your kindle using USB Transfer it to your kindle to documents > Dictionary folder
-
-
+## Device Support
+This dictionary is tested with *All New Kindle Basic 11th Generation*. This should also work with any other kindle. Please let me know if you face any problem. Thank You!
 
 *Developer DOC*
 
