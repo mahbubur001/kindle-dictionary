@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package version="2.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookId">
+  <metadata>
+    <dc:title>E2B Dictionary</dc:title>
+    <dc:creator opf:role="aut">Mahbubur Rahman</dc:creator>
+    <dc:language>en-US</dc:language>
+    <meta name="cover" content="my-cover-image" />
+    <x-metadata>
+      <DictionaryInLanguage>en-US</DictionaryInLanguage>
+      <DictionaryOutLanguage>bn-BD</DictionaryOutLanguage>
+      <DefaultLookupIndex>default</DefaultLookupIndex>
+    </x-metadata>
+  </metadata>
+  <manifest>
+    <item href="cover.png" id="cover-image" media-type="image/png" />
+    <item id="content" href="e2b-dictionary.xhtml" media-type="application/xhtml+xml" />
+  </manifest>
+  <spine>
+      <itemref idref="cover-image" />
+      <itemref idref="content"/>
+  </spine>
+  <guide>
+   <reference type="index" title="IndexName" href="e2b-dictionary.xhtml"/>
+   </guide>
+</package>

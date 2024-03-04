@@ -1,0 +1,17 @@
+{
+    "name": "dictionary",
+    "version": "1.0.0",
+    "description": "",
+    "main": "script.js",
+    "scripts": {
+        "clean": "[ -f *.mobi ] && rm *.mobi",
+        "xhtml": "node script.js",
+        "build-script": "/Applications/Kindle\\ Previewer\\ 3.app/Contents/lib/fc/bin/kindlegen -c0 e2b-dictionary.opf",
+        "build": "npm run xhtml && npm run build-script"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "xmlbuilder2": "^3.1.1"
+    }
+}
