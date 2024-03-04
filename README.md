@@ -1,5 +1,14 @@
 **Kindle Dictionary**
 
+Use:
+
+Download : e2b-dictionary.mobi 
+connect your kindle using USB Transfer it to your kindle to documents > Dictionary folder
+
+
+
+*Developer DOC*
+
 `npm run xhtml`
 
 `npm run build `
