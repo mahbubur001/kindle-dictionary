@@ -1,33 +1,8 @@
 const {create} = require('xmlbuilder2');
 const {readFileSync, writeFileSync} = require('fs');
 
-function getTranslationObj(item) {
-    const translationObj = {
-        'idx:orth': {
-            '@value': item.en,
-            b: item.en,
-        },
-    };
-    const strArray = item.bn.split(", ");
-    if (strArray.length > 1) {
-        // translationObj.ol = strArray.map(_item => ({
-        //     li: _item
-        // }))
-        translationObj.ol = [
-            {
-                li: "ss"
-            }
-        ]
-        // console.log(translationObj);
-
-    } else {
-        translationObj.p = item.bn
-    }
-    return translationObj;
-}
-
 try {
-    const dataRaw = readFileSync('./data/e2b-data.json', {encoding: 'utf8'});
+    const dataRaw = readFileSync('./data/E2Bdatabase.json', {encoding: 'utf8'});
     const dictionaryData = JSON.parse(dataRaw.toString());
     let doc = create();
     doc = doc.ele('html', {
@@ -71,37 +46,6 @@ try {
         }
 
     })
-    // const root = create({
-    //     html: {
-    //         '@xmlns:math': "http://exslt.org/math",
-    //         '@xmlns:svg': "http://www.w3.org/2000/svg",
-    //         '@xmlns:tl': "https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf",
-    //         '@xmlns:saxon': "http://saxon.sf.net/",
-    //         '@xmlns:xs': "http://www.w3.org/2001/XMLSchema",
-    //         '@xmlns:xsi': "http://www.w3.org/2001/XMLSchema-instance",
-    //         '@xmlns:cx': "https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf",
-    //         '@xmlns:dc': "http://purl.org/dc/elements/1.1/",
-    //         '@xmlns:mbp': "https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf",
-    //         '@xmlns:mmc': "https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf",
-    //         '@xmlns:idx': "https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf",
-    //         head: {
-    //             meta: {
-    //                 '@http-equiv': 'Content-Type',
-    //                 '@content': "text/html; charset=utf-8"
-    //             }
-    //         },
-    //         body: {
-    //             'mbp:frameset': dictionaryData.map((item, index) => ({
-    //                 'idx:entry': {
-    //                     '@name': 'default',
-    //                     '@spell': 'yes',
-    //                     '@scriptable': 'yes',
-    //                     'idx:short': getTranslationObj(item)
-    //                 }
-    //             }))
-    //         }
-    //     }
-    // }, {headless: true}); // Setting headless to true ensures that a document type declaration is not added automatically
 
     // Convert XML to string
     const xmlString = doc.end({prettyPrint: true});
